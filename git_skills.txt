@@ -1,11 +1,11 @@
-Ê×ÏÈÔÚ±¾µØµÄÒ»¸ö¾­¹ıgit init³õÊ¼»¯Ö®ºóµÄ²Ö¿âÖĞ £¬½øĞĞÔ¶³Ì²Ö¿âÉèÖÃ£¬
-¼´£ºgit remote add origin(Õâ¸öÃû×ÖËæ±ãÆğ) git@github.com:SuperIllidan/ÏîÄ¿Ãû×Ö.git
+é¦–å…ˆåœ¨æœ¬åœ°çš„ä¸€ä¸ªç»è¿‡git initåˆå§‹åŒ–ä¹‹åçš„ä»“åº“ä¸­ ï¼Œè¿›è¡Œè¿œç¨‹ä»“åº“è®¾ç½®ï¼Œ
+å³ï¼šgit remote add origin(è¿™ä¸ªåå­—éšä¾¿èµ·) git@github.com:SuperIllidan/é¡¹ç›®åå­—.git
 
-È»ºóÒªÏÈ°ÑÔ¶³Ì²Ö¿âgit pull origin masterµ½±¾µØ£¨Õâ¸öË³ĞòµÄÔ­ÒòÊÇ£ºÔÚgihub¹ÙÍø½¨Á¢repositoryÊ±£¬Ñ¡ÔñÁËÌí¼ÓÁËreadme.md Èç¹ûĞÂ½¨repositoryÊ±Ã»ÓĞÑ¡Ôñreadme.mdÎÄ¼ş£¬ÄÇÃ´ÉèÖÃÍêÔ¶³Ì²Ö¿âºó£¬Ö±½Ógit push -u Ô¶³Ì²Ö¿âÃû ·ÖÖ§Ãû
- ¾Í¿ÉÒÔÁË-uµÄ×÷ÓÃÊÇGit²»µ«»á°Ñ±¾µØµÄmaster·ÖÖ§ÄÚÈİÍÆËÍµÄÔ¶³ÌĞÂµÄmaster·ÖÖ§£¬»¹»á°Ñ±¾µØµÄmaster·ÖÖ§ºÍÔ¶³ÌµÄmaster·ÖÖ§¹ØÁªÆğÀ´£¬ÔÚÒÔºóµÄÍÆËÍ»òÕßÀ­È¡Ê±¾Í¿ÉÒÔ¼ò»¯ÃüÁî¡££©
+ç„¶åè¦å…ˆæŠŠè¿œç¨‹ä»“åº“git pull origin masteråˆ°æœ¬åœ°ï¼ˆè¿™ä¸ªé¡ºåºçš„åŸå› æ˜¯ï¼šåœ¨gihubå®˜ç½‘å»ºç«‹repositoryæ—¶ï¼Œé€‰æ‹©äº†æ·»åŠ äº†readme.md å¦‚æœæ–°å»ºrepositoryæ—¶æ²¡æœ‰é€‰æ‹©readme.mdæ–‡ä»¶ï¼Œé‚£ä¹ˆè®¾ç½®å®Œè¿œç¨‹ä»“åº“åï¼Œç›´æ¥git push -u è¿œç¨‹ä»“åº“å åˆ†æ”¯å
+ å°±å¯ä»¥äº†-uçš„ä½œç”¨æ˜¯Gitä¸ä½†ä¼šæŠŠæœ¬åœ°çš„masteråˆ†æ”¯å†…å®¹æ¨é€çš„è¿œç¨‹æ–°çš„masteråˆ†æ”¯ï¼Œè¿˜ä¼šæŠŠæœ¬åœ°çš„masteråˆ†æ”¯å’Œè¿œç¨‹çš„masteråˆ†æ”¯å…³è”èµ·æ¥ï¼Œåœ¨ä»¥åçš„æ¨é€æˆ–è€…æ‹‰å–æ—¶å°±å¯ä»¥ç®€åŒ–å‘½ä»¤ã€‚ï¼‰
 
-1¡¢Èç¹û³öÏÖ¡°fatal: refusing to merge unrelated histories¡± ÔÚºóÂğ¼ÓÉÏ--allow-unrelated-histories
-   (Õâ¸öÎÊÌâÊÇ³öÏÖÔÚ¸ß°æ±¾git¿ÉÄÜÊÇ2.9Ö®ºó£¬È»ºóÈç¹û³öÏÖÒ»¸öĞÂµÄ´°¿Ú£¬ÌáÊ¾ Please enter a commit message to explain why 	this merge is necessary, # especially if it merges an¡£¡£¡£¡£¡£ÄÇÃ´
+1ã€å¦‚æœå‡ºç°â€œfatal: refusing to merge unrelated historiesâ€ åœ¨åå—åŠ ä¸Š--allow-unrelated-histories
+   (è¿™ä¸ªé—®é¢˜æ˜¯å‡ºç°åœ¨é«˜ç‰ˆæœ¬gitå¯èƒ½æ˜¯2.9ä¹‹åï¼Œç„¶åå¦‚æœå‡ºç°ä¸€ä¸ªæ–°çš„çª—å£ï¼Œæç¤º Please enter a commit message to explain why 	this merge is necessary, # especially if it merges anã€‚ã€‚ã€‚ã€‚ã€‚é‚£ä¹ˆ
 To solve this:
 
 press "i"
@@ -16,46 +16,46 @@ then press enter
 
 
 
-2¡¢É¾³ı Ò»Ğ© Ã»ÓĞ Git add µÄ ÎÄ¼ş£»
-    -n ÏÔÊ¾ ½«Òª É¾³ıµÄ ÎÄ¼ş ºÍ  Ä¿Â¼
-     -f É¾³ı ÎÄ¼ş£¬-df É¾³ı ÎÄ¼ş ºÍ Ä¿Â¼
+2ã€åˆ é™¤ ä¸€äº› æ²¡æœ‰ Git add çš„ æ–‡ä»¶ï¼›
+    -n æ˜¾ç¤º å°†è¦ åˆ é™¤çš„ æ–‡ä»¶ å’Œ  ç›®å½•
+     -f åˆ é™¤ æ–‡ä»¶ï¼Œ-df åˆ é™¤ æ–‡ä»¶ å’Œ ç›®å½•
 git clean -n && git clean -df && git clean -f
 
-Ö®ºó°ÑÒªÉÏ´«µ½githubµÄÏîÄ¿¸´ÖÆµ½±¾µØ²Ö¿â£¬
+ä¹‹åæŠŠè¦ä¸Šä¼ åˆ°githubçš„é¡¹ç›®å¤åˆ¶åˆ°æœ¬åœ°ä»“åº“ï¼Œ
 
-È»ºó git add .
+ç„¶å git add .
 
-È»ºógit commit -m "XXXXX"
+ç„¶ågit commit -m "XXXXX"
 
-×îºóÖ´ĞĞgit push origin master
+æœ€åæ‰§è¡Œgit push origin master
 
 
-1£©	$ git config --global user.name "Your Name"
+1ï¼‰	$ git config --global user.name "Your Name"
 	$ git config --global user.email "email@example.com"
 
-2£© 	±¾µØgit²Ö¿âÎ»Îª¿ÕÊ±²»ÔÊĞípush
+2ï¼‰ 	æœ¬åœ°gitä»“åº“ä½ä¸ºç©ºæ—¶ä¸å…è®¸push
 
-3£©	warning: LF will be replaced by CRLF in    £ûÔ­Òò·ÖÎö£º
-CRLF -- Carriage-Return Line-Feed »Ø³µ»»ĞĞ¾ÍÊÇ»Ø³µ(CR, ASCII 13, \r) »»ĞĞ(LF,ASCII 10, \n)¡£
-ÕâÁ½¸öACSII×Ö·û²»»áÔÚÆÁÄ»ÓĞÈÎºÎÊä³ö£¬µ«ÔÚWindowsÖĞ¹ã·ºÊ¹ÓÃÀ´±êÊ¶Ò»ĞĞµÄ½áÊø¡£¶øÔÚLinux/UNIXÏµÍ³ÖĞÖ»ÓĞ»»ĞĞ·û¡£
-Ò²¾ÍÊÇËµÔÚwindowsÖĞµÄ»»ĞĞ·ûÎª CRLF£¬ ¶øÔÚlinuxÏÂµÄ»»ĞĞ·ûÎª£ºLF  
-Ê¹ÓÃgitÀ´Éú³ÉÒ»¸örails¹¤³Ìºó£¬ÎÄ¼şÖĞµÄ»»ĞĞ·ûÎªLF£¬ µ±Ö´ĞĞgit add .Ê±£¬ÏµÍ³ÌáÊ¾£ºLF ½«±»×ª»»³É CRLF
+3ï¼‰	warning: LF will be replaced by CRLF in    ï½›åŸå› åˆ†æï¼š
+CRLF -- Carriage-Return Line-Feed å›è½¦æ¢è¡Œå°±æ˜¯å›è½¦(CR, ASCII 13, \r) æ¢è¡Œ(LF,ASCII 10, \n)ã€‚
+è¿™ä¸¤ä¸ªACSIIå­—ç¬¦ä¸ä¼šåœ¨å±å¹•æœ‰ä»»ä½•è¾“å‡ºï¼Œä½†åœ¨Windowsä¸­å¹¿æ³›ä½¿ç”¨æ¥æ ‡è¯†ä¸€è¡Œçš„ç»“æŸã€‚è€Œåœ¨Linux/UNIXç³»ç»Ÿä¸­åªæœ‰æ¢è¡Œç¬¦ã€‚
+ä¹Ÿå°±æ˜¯è¯´åœ¨windowsä¸­çš„æ¢è¡Œç¬¦ä¸º CRLFï¼Œ è€Œåœ¨linuxä¸‹çš„æ¢è¡Œç¬¦ä¸ºï¼šLF  
+ä½¿ç”¨gitæ¥ç”Ÿæˆä¸€ä¸ªrailså·¥ç¨‹åï¼Œæ–‡ä»¶ä¸­çš„æ¢è¡Œç¬¦ä¸ºLFï¼Œ å½“æ‰§è¡Œgit add .æ—¶ï¼Œç³»ç»Ÿæç¤ºï¼šLF å°†è¢«è½¬æ¢æˆ CRLF
  
-½â¾ö·½·¨£º
+è§£å†³æ–¹æ³•ï¼š
  
-É¾³ı¸Õ¸ÕÉú³ÉµÄ.gitÎÄ¼ş
+åˆ é™¤åˆšåˆšç”Ÿæˆçš„.gitæ–‡ä»¶
 $ rm -rf .git  
-$ git config --global core.autocrlf false   //½ûÓÃ×Ô¶¯×ª»»
-ÕâÑùÏµÍ³¾Í²»»áÈ¥½øĞĞ»»ĞĞ·ûµÄ×ª»»ÁË
-×îºóÖØĞÂÖ´ĞĞ
+$ git config --global core.autocrlf false   //ç¦ç”¨è‡ªåŠ¨è½¬æ¢
+è¿™æ ·ç³»ç»Ÿå°±ä¸ä¼šå»è¿›è¡Œæ¢è¡Œç¬¦çš„è½¬æ¢äº†
+æœ€åé‡æ–°æ‰§è¡Œ
 $ git init  
 $ git add . 
-(#±¸×¢¿ÉÒÔÊ¹ÓÃ--global Ò²¿ÉÒÔ²»ÊµÓÃ£¬Ó°Ïì²»´ó  
-git config --global core.autocrlf true #Õâ¸öÊÇ×ª»»£¬Ò²ÊÇÄ¬ÈÏÖµ  
-git config --global core.autocrlf input #Ã²ËÆÊÇÉÏ¿â×ª»»£¬´Ó¿âÖĞÇ¨³ö´úÂë²»×ª»»  
-git config --global core.autocrlf false  #Õâ¸öÒ»°ãÊÇwindowÉÏµÄ£¬²»×ª»»  
+(#å¤‡æ³¨å¯ä»¥ä½¿ç”¨--global ä¹Ÿå¯ä»¥ä¸å®ç”¨ï¼Œå½±å“ä¸å¤§  
+git config --global core.autocrlf true #è¿™ä¸ªæ˜¯è½¬æ¢ï¼Œä¹Ÿæ˜¯é»˜è®¤å€¼  
+git config --global core.autocrlf input #è²Œä¼¼æ˜¯ä¸Šåº“è½¬æ¢ï¼Œä»åº“ä¸­è¿å‡ºä»£ç ä¸è½¬æ¢  
+git config --global core.autocrlf false  #è¿™ä¸ªä¸€èˆ¬æ˜¯windowä¸Šçš„ï¼Œä¸è½¬æ¢  
  
-4£©cd .. »Øµ½ÉÏÒ»¼¶Ä¿Â¼×¢ÒâcdºÍ..Ö®¼äÓĞ¿Õ¸ñ ÁíÍâ cd - ÄÜÈÃÄã»Øµ½ÉÏÒ»²½µÄÄ¿Â¼
+4ï¼‰cd .. å›åˆ°ä¸Šä¸€çº§ç›®å½•æ³¨æ„cdå’Œ..ä¹‹é—´æœ‰ç©ºæ ¼ å¦å¤– cd - èƒ½è®©ä½ å›åˆ°ä¸Šä¸€æ­¥çš„ç›®å½•
 
 
 
