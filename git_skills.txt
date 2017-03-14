@@ -1,0 +1,66 @@
+首先在本地的一个经过git init初始化之后的仓库中 ，进行远程仓库设置，
+即：git remote add origin(这个名字随便起) git@github.com:SuperIllidan/项目名字.git
+
+然后要先把远程仓库git pull origin master到本地（这个顺序的原因是：在gihub官网建立repository时，选择了添加了readme.md 如果新建repository时没有选择readme.md文件，那么设置完远程仓库后，直接git push -u 远程仓库名 分支名
+ 就可以了-u的作用是Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。）
+
+1、如果出现“fatal: refusing to merge unrelated histories” 在后吗加上--allow-unrelated-histories
+   (这个问题是出现在高版本git可能是2.9之后，然后如果出现一个新的窗口，提示 Please enter a commit message to explain why 	this merge is necessary, # especially if it merges an。。。。。那么
+To solve this:
+
+press "i"
+write your merge message
+press "esc"
+write ":wq"
+then press enter 	
+
+
+
+2、删除 一些 没有 Git add 的 文件；
+    -n 显示 将要 删除的 文件 和  目录
+     -f 删除 文件，-df 删除 文件 和 目录
+git clean -n && git clean -df && git clean -f
+
+之后把要上传到github的项目复制到本地仓库，
+
+然后 git add .
+
+然后git commit -m "XXXXX"
+
+最后执行git push origin master
+
+
+1）	$ git config --global user.name "Your Name"
+	$ git config --global user.email "email@example.com"
+
+2） 	本地git仓库位为空时不允许push
+
+3）	warning: LF will be replaced by CRLF in    ｛原因分析：
+CRLF -- Carriage-Return Line-Feed 回车换行就是回车(CR, ASCII 13, \r) 换行(LF,ASCII 10, \n)。
+这两个ACSII字符不会在屏幕有任何输出，但在Windows中广泛使用来标识一行的结束。而在Linux/UNIX系统中只有换行符。
+也就是说在windows中的换行符为 CRLF， 而在linux下的换行符为：LF  
+使用git来生成一个rails工程后，文件中的换行符为LF， 当执行git add .时，系统提示：LF 将被转换成 CRLF
+ 
+解决方法：
+ 
+删除刚刚生成的.git文件
+$ rm -rf .git  
+$ git config --global core.autocrlf false   //禁用自动转换
+这样系统就不会去进行换行符的转换了
+最后重新执行
+$ git init  
+$ git add . 
+(#备注可以使用--global 也可以不实用，影响不大  
+git config --global core.autocrlf true #这个是转换，也是默认值  
+git config --global core.autocrlf input #貌似是上库转换，从库中迁出代码不转换  
+git config --global core.autocrlf false  #这个一般是window上的，不转换  
+ 
+4）cd .. 回到上一级目录注意cd和..之间有空格 另外 cd - 能让你回到上一步的目录
+
+
+
+
+
+
+
+
