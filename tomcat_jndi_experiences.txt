@@ -59,7 +59,7 @@ maxWaitMillis	indefinitely	（如果没有可用连接）池在抛出异常前�
 	1、比如有个javabean person类，在jsp页面正确导入后，但访问jsp页面时会报Person cannot be resolved to a type之类的错误，这是因为，我们没有把项目部署到tomcat，而只是在我们的eclipse工作空间内，它的WEB-INF下面不会有classes文件夹，也就是说项目没有被编译，当然会报错误，因为相当于没有这个类。解决方法：可以先部署到tomcat运行，然后把生成的classes文件夹拷贝过来，也可以自己建文件夹，然后根据一样的包名，建类，然后编译。
 
 
-新发现：上面说到，在eclipse中启动tomcat，但不要把项目部署到tomcat中。其实也可以部署到tomcat上，但是我们要在web项目的META-INF下面新建context.xml文件(名字不能更改)，其内容与上面的xyz.xml基本一样，但是<context 属性=“”>的属性如path、docBase都已经不起作用。还有就是那个
-xyz.xml不会影响这种方法，不用删除它。
+新发现：上面说到，在eclipse中启动tomcat，但不要把项目部署到tomcat中。其实也可以部署到tomcat上，但是我们要在web项目的META-INF下面新建context.xml文件(名字不能更改)，其内容与上面的xyz.xml基本一样，但是<context 属性=“”>的属性如path、docBase都已经不起作用。
+还有就是使用这种方法要把之前的那个xyz.xml文件删除。
 
 
