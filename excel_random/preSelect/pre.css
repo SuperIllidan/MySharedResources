@@ -1,0 +1,31 @@
+.container-fluid{
+				background-color:rgb(248,248,255);
+				margin-top:20px;
+				margin-left:350px;
+				margin-bottom:60px;
+				margin-right:350px;
+			}
+			.row{
+				margin-top:60px;
+			}
+			#agentListDiv{
+				border:solid 1px #999;
+				height:0px;
+				padding-bottom:40%;
+				overflow:auto;
+			}
+			#doneSelectionDiv{
+				border:solid 1px #999;
+				height:0px;
+				padding-bottom:40%;
+				overflow:auto;
+			}
+			#selectAndShowDiv{
+				border:solid 1px #999;
+				height:0px;
+				padding-bottom:40%;
+				overflow:auto;
+			}
+			#addAgentDiv{
+				border:solid 1px #999;
+			}
