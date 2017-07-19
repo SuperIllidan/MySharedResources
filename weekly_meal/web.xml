@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4"
+	xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>zgkx</display-name>
+	
+	<filter>
+		<filter-name>attackFilter</filter-name>
+		<filter-class>com.hidy.hdoa6.util.HDAttackFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>attackFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	 -->
+	<!-- ************************servler regedit start*********************** -->
+	<!-- online tq 2012-06-18 start -->
+	<listener>
+		<listener-class>com.hidy.hdoa6.im.OnlineUser</listener-class>
+	</listener>
+	<!-- <servlet> <description>退出</description> <display-name>退出</display-name> 
+		<servlet-name>SessionInvalidate</servlet-name> <servlet-class>com.hidy.hdoa6.im.SessionInvalidate</servlet-class> 
+		</servlet> -->
+	<!-- online tq 2012-06-18 end -->
+	<context-param>
+			<description>selection result files path</description>
+			<param-name>pathOfSelectResultFiles</param-name>
+			<param-value>D:/workspace/zgkx/WebContent/WEB-INF/proxyAgent/resultFiles/</param-value>
+	</context-param>
+	<context-param>
+			<description>excel-file-real-path</description>
+			<param-name>pathOfExcelFile</param-name>
+			<param-value>D:/workspace/zgkx/WebContent/WEB-INF/proxyAgent/</param-value>
+	</context-param>
+	<context-param>
+			<description>excel-file-name</description>
+			<param-name>nameOfExcelFile</param-name>
+			<param-value>proxyAgentData.xlsx</param-value>
+	</context-param>
+	<context-param>
+		<param-name>pathOfDietFiles</param-name>
+		<param-value>D:/workspace/zgkx/WebContent/WEB-INF/weeklyDiet/threeMeals/</param-value>
+	</context-param>
+	<context-param>
+		<param-name>pathOfTempFiles</param-name>
+		<param-value>D:/workspace/zgkx/WebContent/WEB-INF/weeklyDiet/temp/</param-value>
+	</context-param>
+	<context-param>
+		<param-name>pathOfAdditionalFiles</param-name>
+		<param-value>D:/workspace/zgkx/WebContent/WEB-INF/weeklyDiet/additionalDiet/</param-value>
+	</context-param>
+	<servlet>
+		<description>
+		</description>
+		<display-name>PreRandomSelectAgentServlet</display-name>
+		<servlet-name>PreRandomSelectAgentServlet</servlet-name>
+		<servlet-class>com.hidy.hdoa6.caigou.PreRandomSelectAgentServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>PreRandomSelectPlanIdCheck</display-name>
+		<servlet-name>PreRandomSelectPlanIdCheck</servlet-name>
+		<servlet-class>com.hidy.hdoa6.caigou.PreRandomSelectPlanIdCheck</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>PreRandomSelectAgentNumsCheck</display-name>
+		<servlet-name>PreRandomSelectAgentNumsCheck</servlet-name>
+		<servlet-class>com.hidy.hdoa6.caigou.PreRandomSelectAgentNumsCheck</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>PreRandomSelectSearchFile</display-name>
+		<servlet-name>PreRandomSelectSearchFile</servlet-name>
+		<servlet-class>com.hidy.hdoa6.caigou.PreRandomSelectSearchFile</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>PreRandomSelectAgentList</display-name>
+		<servlet-name>PreRandomSelectAgentList</servlet-name>
+		<servlet-class>com.hidy.hdoa6.caigou.PreRandomSelectAgentList</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>PreRandomSelectDoneProject</display-name>
+		<servlet-name>PreRandomSelectDoneProject</servlet-name>
+		<servlet-class>com.hidy.hdoa6.caigou.PreRandomSelectDoneProject</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>PreRandomSelectAlterFile</display-name>
+		<servlet-name>PreRandomSelectAlterFile</servlet-name>
+		<servlet-class>com.hidy.hdoa6.caigou.PreRandomSelectAlterFile</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>PreRandomSelectAddAgent</display-name>
+		<servlet-name>PreRandomSelectAddAgent</servlet-name>
+		<servlet-class>com.hidy.hdoa6.caigou.PreRandomSelectAddAgent</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>PreRandomSelectReview</display-name>
+		<servlet-name>PreRandomSelectReview</servlet-name>
+		<servlet-class>com.hidy.hdoa6.caigou.PreRandomSelectReview</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>WeeklyDietShow</display-name>
+		<servlet-name>WeeklyDietShow</servlet-name>
+		<servlet-class>com.hidy.hdoa6.weeklyDiet.WeeklyDietShow</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>WeeklyDietUpload</display-name>
+		<servlet-name>WeeklyDietUpload</servlet-name>
+		<servlet-class>com.hidy.hdoa6.weeklyDiet.WeeklyDietUpload</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>WeeklyDietUploadAdditional</display-name>
+		<servlet-name>WeeklyDietUploadAdditional</servlet-name>
+		<servlet-class>com.hidy.hdoa6.weeklyDiet.WeeklyDietUploadAdditional</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>WeeklyDietAdditionalShow</display-name>
+		<servlet-name>WeeklyDietAdditionalShow</servlet-name>
+		<servlet-class>com.hidy.hdoa6.weeklyDiet.WeeklyDietAdditionalShow</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>PreRandomSelectAgentServlet</servlet-name>
+		<url-pattern>/PreRandomSelectAgentServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PreRandomSelectPlanIdCheck</servlet-name>
+		<url-pattern>/PreRandomSelectPlanIdCheck</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PreRandomSelectAgentNumsCheck</servlet-name>
+		<url-pattern>/PreRandomSelectAgentNumsCheck</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PreRandomSelectAgentList</servlet-name>
+		<url-pattern>/PreRandomSelectAgentList</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PreRandomSelectDoneProject</servlet-name>
+		<url-pattern>/PreRandomSelectDoneProject</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PreRandomSelectAlterFile</servlet-name>
+		<url-pattern>/PreRandomSelectAlterFile</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PreRandomSelectAddAgent</servlet-name>
+		<url-pattern>/PreRandomSelectAddAgent</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PreRandomSelectReview</servlet-name>
+		<url-pattern>/PreRandomSelectReview</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>WeeklyDietShow</servlet-name>
+		<url-pattern>/WeeklyDietShow</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>WeeklyDietUpload</servlet-name>
+		<url-pattern>/WeeklyDietUpload</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>WeeklyDietUploadAdditional</servlet-name>
+		<url-pattern>/WeeklyDietUploadAdditional</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>WeeklyDietAdditionalShow</servlet-name>
+		<url-pattern>/WeeklyDietAdditionalShow</url-pattern>
+	</servlet-mapping>
+
+	<mime-mapping>
+		<extension>htc</extension>
+		<mime-type>text/x-component</mime-type>
+	</mime-mapping>
+
+	<!--mime-mapping> <extension>pdf</extension> <mime-type>application/pdf</mime-type> 
+		</mime-mapping -->
+
+	<welcome-file-list>
+		<welcome-file>default.jsp</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
