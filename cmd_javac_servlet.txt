@@ -1,0 +1,26 @@
+﻿首先在一个目录中建立xxx.java
+代码如下 
+package com.ice;
+
+import java.io.*;
+import javax.servlet.*;
+
+public class FirstServlet extends GenericServlet
+{
+    public void service(ServletRequest request,ServletResponse response)throws 							    ServletException,java.io.IOException
+     {
+        OutputStream out = response.getOutputStream();
+	out.write("hello servlet!".getBytes("UTF-8"));
+     }
+}
+
+那么然后 把servlet-api.jar复制到这个目录中
+
+执行如下命令   javac -d . -classpath servlet-api.jar xxx.java
+
+
+另一种方式是：不用拷贝servlet-api.jar
+先执行 set classpath=%classpath%;jar1路径;jar2路径;...
+比如我的servlet-api.jar路径为E:\apache-tomcat-8.0.39\lib\servlet.jar
+然后执行 javac -d . -encoding utf-8 xxx.java
+	      

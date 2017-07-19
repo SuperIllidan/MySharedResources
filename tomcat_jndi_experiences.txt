@@ -1,0 +1,65 @@
+以MySQL数据库为例
+
+tomcat servlet.xml中 Context标签个参数含义
+<Context path="/xxx" docBase="D:\xxx" debug="0" reloadable="true" crossContext="true" />
+path 指出你的访问路径
+docBase指出你的存放路径
+debug 为设定debug的等级0提供最少的信息,9提供最多的信息
+reloadable=true时 当web.xml或者class有改动的时候都会自动重新加载不需要从新启动服务
+crosscontext="true"表示配置的不同context共享一个session
+
+
+
+
+1)首先将数据库驱动jar包放入Tomcat的lib目录下
+2）写JNDI的数据源配置,如下：
+     <Resource name="jdbc/mysql" 
+	       auth="Container"
+	       type="javax.sql.DataSource"
+	       driverClassName="com.mysql.jdbc.Driver"
+	       url="jdbc:mysql://localhost:3306/person_test?useUnicode=true&amp;characterEncoding=utf-8"
+	       username="ice"
+	       password="12345" 
+	       maxActive="100"
+	       maxIdle="20"
+	       maxWait="60000"(单位毫秒)	/>
+
+由于tomcat7之后采用默认连接池为DBCP2 它的配置参数为：
+ 
+  参数         缺省值               描述
+initialSize	0	当这个池被启动时初始化的创建的连接个数，起始生效版本：1.2
+maxTotal	8	可以在这个池中同时被分配的有效连接数的最大值，如设置为负数，则不限制
+maxIdle	   	8	可以在池中保持空闲的最大连接数，超出设置值之外的空闲连接将被回收，如设置为负数，则不限制
+minIdle		0	可以在池中保持空闲的最小连接数，超出设置值之外的空闲连接将被创建，如设置为0，则不创建
+maxWaitMillis	indefinitely	（如果没有可用连接）池在抛出异常前等待的一个连接被归还的最大毫秒数，设置为-1则等待时间不确定
+
+所以上面的配置中，会被警告：maxActive-->maxTotal  maxWait-->maxWaitMillis
+
+    之后将此内容添加在哪，有不同的做法：
+     a）首先比较推荐的做法，而且对tomcat的侵入性小 就是在conf/catalina/localhost/下面建立一个“ xyz.xml ”的xml文件，文件
+	内容为  <?xml version="1.0" encoding="UTF-8"?>
+		<Context path="/JNDI" docBase="D:\MyJavaEEWorkSpace\JNDI\WebContent" debug="0" privileged="true">
+			<Resource name="jdbc/mysql"
+		  		auth="Container"
+		  		type="javax.sql.DataSource"
+		  		driverClassName="com.mysql.jdbc.Driver"
+		  		url="jdbc:mysql://127.0.0.1:3306/person_test?useUnicode=true&amp;characterEncoding=utf-8"
+		  		username="ice"
+		  		password="12345"
+		 		maxActive="100"
+		  		maxIdle="20"
+		  		maxWait="60000" />
+		</Context>
+	
+	说明：xml文件的名字就是以后的访问路径即：http://......:8080/xml文件名字/index.jsp。还有需要注意的是在eclipse中，不要将
+	     此项目发布到tomcat上，仅需打开tomcat即可。
+	     还有Context标签内容解释：path的值一定要和xml文件名字一致，其次docBase指的是我们项目的位置（eclipse中一般是工作空	     间下的项目名称目录下的WebContent,myEclipse则是WebRoot）
+
+在此记录一下关于用上面方法获得数据库链接后，操作数据时遇到的问题：
+	1、比如有个javabean person类，在jsp页面正确导入后，但访问jsp页面时会报Person cannot be resolved to a type之类的错误，这是因为，我们没有把项目部署到tomcat，而只是在我们的eclipse工作空间内，它的WEB-INF下面不会有classes文件夹，也就是说项目没有被编译，当然会报错误，因为相当于没有这个类。解决方法：可以先部署到tomcat运行，然后把生成的classes文件夹拷贝过来，也可以自己建文件夹，然后根据一样的包名，建类，然后编译。
+
+
+新发现：上面说到，在eclipse中启动tomcat，但不要把项目部署到tomcat中。其实也可以部署到tomcat上，但是我们要在web项目的META-INF下面新建context.xml文件(名字不能更改)，其内容与上面的xyz.xml基本一样，但是<context 属性=“”>的属性如path、docBase都已经不起作用。
+还有就是使用这种方法要把之前的那个xyz.xml文件删除。
+
+
